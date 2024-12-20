@@ -1,0 +1,59 @@
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Notification container (whole container fades in and out) */
+.notification {
+    background-color: #e0f7fa;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Start hidden */
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0s ease 0.5s;
+}
+
+/* Make the notification visible when triggered */
+.notification.show {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease, visibility 0s ease 0s;
+}
+
+/* Preview message */
+.notification-preview {
+    font-size: 16px;
+    margin: 0;
+    color: #00796b;
+}
+
+/* Full message (hidden by default) */
+.notification-full {
+    visibility: hidden;
+    opacity: 0;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #004d40;
+    transition: opacity 0.5s ease, visibility 0s ease 0.5s;
+}
+
+/* Fade-in effect for the full message */
+.notification-full.show {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease, visibility 0s ease 0s;
+}
+
+/* Styling for the "Read more" button */
+#expand-btn {
+    color: #00796b;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+}
